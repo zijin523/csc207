@@ -1,0 +1,232 @@
+=====
+ADD INSTRUCTIONS FOR HOW TO RUN/USE YOUR PROGRAM HERE:
+e.g. What format should we use to input data or add data to events.txt? Anything else we need to know in order to use your program?
+=====
+The "events.txt" of our program are auth.txt, data.txt and route.txt.
+~ auth.txt stores all of the user information with the format of [username,useremail,role], including the default AdminUser admin,admin@qq.com,admin.
+~ data.txt stores all of the user actions with the format of 
+[username_useremail_cardnumber,suspended or not, being used or not,balance;__mm-dd,trip duration,trip cost,completed or not,trip route;_{month=cost}]
+~ routes.txt stores all of the map information, with the format of one line represents the name of the transit line, 
+following by the route of the line in the next line of the file. More information please refer to route.jpg.
+
+Warning: Although we completed data saving of the system when click the close window button, 
+we do not suggest you do that, which will force the AdminUser to open the system again since the program is terminated.
+
+~ First, Run Main.java in package transitapp. It shows the SystemView of our program. 
+~ In the SystemView, you should sign in by pressing "sign in" button as CardHolder/AdminUser if you already have an account.
+~ If you do not have an account, input a valid name and email to register (register rule see Feature 1) by pressing "sign up".
+~ We can only register as CardHolder, and click "sign in" button will lead to CardHolderView, once you have the correct user name and email entered.
+~ All buttons should be disabled in CardHolderView because AdminUser have not opened the system yet. (Feature 2)
+~ Input given default AdminUser account to open system (account already exists in Feature 1)
+User name: admin
+User email: admin@qq.com
+~ After signing in as AdminUser, click "open" button to enable the system. (This means the system starts a new day and works from now)
+~ Remember: After clicking on "close", which disables the buttons, you should click on "open" to enable again.
+~ Click "exit" button to return to the previous page.
+~ Back to SystemView, you can sign in as CardHolder using your account registered before.
+~ At CardHolderView, "charge" buttons, "suspend" button and "trip>" button are disabled because you have not used a specific card.
+~ Other buttons are available to show some information about CardHolder(Feature 3)
+~ To use a card, you should register card first by clicking "Register Card" button.
+~ On the console, it will give you a new card number, along with other previously registered cards, if there are any.
+~ Click "Use/Change Another" to use a card. (Input format see Feature 3)
+~ Input the card number at console. (Input format see Feature 3)
+~ Now, all buttons are enabled.
+~ You can charge your card or start a trip.
+~ Click on Trip> Button will lead to TripView.
+~ There are three buttons on TripView("Strat Trip", "Next Route", "End Trip")
+~ You may not click "Next Route" and "End Trip" buttons first because you did not start a trip. 
+It will show information on the console to suggest you to start a new trip.
+~ Click on "Start Trip" button, it will ask you to input your selected vehicle line first like (bus1, subway1, bus2, etc) (Input format see Feature 4)
+~ After that, It will print all possible station/stops belongs to this vehicle line for choosing your start. (Input format see Feature 4)
+~ After that, It will ask you input your start station/stop. (Feature 4)
+~ If you want to get your next station/stop please click on "Next Station/Stop" button. (Input format see Feature 4)
+~ If you want to end your trip please click "End Trip" button.
+~ Click "exit" button to return to the previous page.
+~ That is all for our system! Enjoy and have fun with it :)
+-------------------------Thank you!-------------------------------------
+
+
+
+=====
+LIST ALL FEATURES THAT YOU WORKED ON HERE, AND HOW TO INPUT RELEVANT DATA FOR THE FEATURE (IF APPLICABLE)
+=====
+FEATURE 0
+
+Description: Design Pattern - MVC
+
+Usage Instructions:
+Divided Program into Five parts to complete:
+	~ tansitapp - Main method to connect all views together and running the program
+	~ transitcontroller - EventHandler to control different buttons belong to different view and update view or print information on console
+		SystemViewController -> SystemView
+		AdminUserController -> AdminUserView
+		CardHolderController -> CardHolderView
+		TripViewController -> TripView
+	~ transitmodel - Basic data structure based on the program
+		~ Abstract User - CardHolder
+			   			- AdminUser
+		~ Abstract Route - Station
+						 - Stop
+		~ Abstract Vehicle - Bus
+						   - Subway
+		~ Card composite with CardHolder
+		~ Trip composite with Card
+	~ transitutility - Helper method package in Five parts
+		~ login and register implement (Login.java, Register.java)
+		~ read data and save data implement (ReadData.java, SaveData.java, LinesReader.java)
+		~ set attribute in model implement (PossibleNext.java, ChangeName.java)
+		~ Compare data implement(CheckEmail.java, CheckName.java)
+		~ Get data implement (GetDate.java)
+	~ transitview - GUI using javaFX with Four part
+		~ SystemView.java - AdminUser.java
+						  - CardHolder.java - TripView.java
+
+Design Decisions:
+There is a pdf to show init state of desgin pattern with this program: a2-little-brother/CSC207_A2_Design.pdf
+	~ Draw relation between each class and each module
+	~ Draw MVC UML diagram
+	~ Consider using Observer/Observerable updating model and cancel caused by Multithreaded data is out of sync.
+Using the program, the user see the View and click button on view will call Controller to update view and get data from model.
+
+FEATURE 1
+
+Description: LoginIn and Register System
+
+Usage Instructions: 
+~ We can input valid user name and valid user email to login in as a user or register as a user at SystemView.
+~ Only one AdminUser account: admin / admin@qq.com
+~ System recognizes AdminUser and CardHolder automatically when input different accounts and switches to different userViews.
+
+
+Design Decisions: 
+~ email rules: [a-zA-Z0-9_.-]@[a-zA-Z0-9-].[a-zA-Z0-9-] (number or alpha)@(number or alpha).(number or alpha).
+~ name rules: [a-zA-Z]{1} [a-z] (first letter can be Upper or Lower case and the others have to be lower).
+~ Based on the default setting, we only have one AdminUser account to control system.
+~ The people who uses the system can only register as CardHolder.
+~ We have login system to lead different users to different views. (Cardholder -> cardholderview, adminuser -> adminuserview).
+
+FEATURE 2
+
+Description: System control and Daily Report (AdminUserView instructions and buttons functioning)
+
+Usage Instructions: 
+AdminUser ability: - open
+				   - close
+				   - DailyReport
+				   
+~ Open button: Open system to enable all buttons through CardHolderView and TripView, which means the system starts to run continuously in the day.
+~ Close button: Close system to disable all buttons through the whole program and saving the data to data.txt, 
+which means the system is closed at the end of the day.
+~ DailyReport button: Get Daily report of current system (, the console will print total number of stations/stops reached and total costs of customers).
+	In AdminUserController, we have two static global variable to record each CardHolder use this system during open time.
+	We get the data from CardHolder's attribute (CardHolder.daily_trip) to get total cost from that day. And calculate number of 
+	Routes which are traveled by CardHolders to get total number of people who travels today.
+
+Design Decisions:
+~ We only have one adminUser each day to control system
+~ Open system means all system works now
+~ Close system means one day finished
+~ AdminUser decide System operating time
+~ AdminUser Account:
+		admin
+		admin@qq.com
+~ AdminUser have ability to get daily report of the system
+
+
+FEATURE 3
+
+Description: CardHolder Ability and Card Ability (CardHolderView buttons instruction and functioning)
+
+Usage Instructions:
+A CardHolder have ability to: - change name
+							  - get recent three trips
+							  - get average monthly cost
+							  - start a trip
+							  - use a card
+							  - charge a card
+							  - suspend a card
+							  - register a card
+
+~ change name button: Get tip information from the console and change the current card holder's name.
+The change will be saved to auth.txt and data.txt for further login.
+	- input format: Input message should be all alphabet. First character should be upper.
+~ get recent trips button: Get Recent three trips from trip history of the current card holder.
+~ get average monthly cost button: Get average monthly cost based on : total cost / number of month.
+~ register card button: Register a new card and add to the current card holder's card_bag. The card holder
+can register as many cards as he wants, all with the default balance of $19.
+	- output: card number
+~ Use/Change Another button: Use or change another card by input a valid card number. Pressing this button triggers
+suspend button and charge buttons.
+	- output: all card information belongs to the current card holder.
+	- input format: all digit and valid card number exists.
+~ suspend button: suspend a card which sets this card suspended by pressing Use/Change Another button first.
+	- input format: all digit and valid card number exists.
+~ charge button: Only enabled when use a card by pressing Use/Change Another button first. Charge relative amount of 
+money into this card, including $10, $20 and $50.
+	- output: print card balance
+~ trip> button: Only enabled when use a card by pressing Use/Change Another button first. Switches the view to TripView.
+
+
+Design Decisions:
+~ If login as CardHolder without opening system by AdminUser, all buttons are disabled.
+~ After AdminUser open system, CardHolder can use the system, except for card related actions (those buttons are disabled still).
+~ When CardHolder chooses to use a card by pressing the "Use/Change Another" button, they can start trip, charge cards, suspend cards.
+~ CardHolder can change name, get recent three trips and get average monthly costs.
+~ If a card was banned, cannot use charge button and trip button.
+~ If a card was negative balance, cannot use trip button but can charge.
+
+
+
+FEATURE 4
+
+Description: Trip Ability (TripView buttons instruction and functioning)
+
+Usage Instructions:
+Trip based on the control of three buttons which are "start a trip", "next station/stop", "end a trip".
+When enter this view, system will check whether there exists uncompleted trip to avoid stealing a ride.
+Also, when a card holder starts a new trip based on last trip with same location (curr start = last stop) within 2 hours, it will count one continuous trip
+with the cap of $6. Otherwise a new trip will be counted.
+System will get date in real life.
+It will synchronize the status of the card （tap out/tap in）
+~ Start a Trip button: Start a new trip based on user input valid vehicle line and valid route (tap in). If there exists uncompleted trips, automatically finished.
+	- output: all names of vehicle lines
+	- input format: should be the same as at least one name of vehicle lines
+	- output: all names of routes on this vehicle lines
+	- input format: should be the same as at least one name of routes
+~ Next stop/station button: If a trip is on active, it can choose next possible stations/stops based on your chosen line.
+	- output: based on your last station/stop, it shows all possible next stations/stops.
+	- input format: should be the same as at least one name of possible next stations/stops. 
+	It is different from starting a trip, because considering cross of different line.
+	So, we need to input routeName-lineName as format.
+~ End a Trip: If a trip is on active, it can end this trip (tap out).
+ 	- output: date and show status of trip.
+
+Design Decisions:
+~ A trip construct successfully based on input valid start route and valid vehicle lines.
+~ Each bus ride costs $2 as long as you tap in, each subway ride costs $0.5 * stations you reached as you tap out the last station. 
+~ It also counts the duration of the trip in hours and converts it 10:1 into cost (moving from each bus stop takes 0.1h and $0.01, moving from
+each subway station takes 0.2h and $0.02).
+~ If a trip was uncompleted before, click on start trip will complete previous trip, get costs and start a new trip.
+~ If a trip is not started yet, cannot choose next route and end trip.
+~ If a trip was uncompleted before, you can click on end trip button to end previous trip.
+~ If the trip starts without ending (tap out), there will be record of the trip, and next time if the trip start is the end location of the uncompleted trip,
+it will count as a completed trip then calculate the cost and time in one trip, if not exceed the 2 hour. Otherwise, an uncompleted trip will be counted and
+cost and time will be calculated accordingly.
+~ If the TripView is closed for some reason by closing the window, it will count as a uncompleted trip and calculate the cost and time.
+
+
+
+
+======
+
+Note: If you have design decisions that don't fit under a specific feature, but are instead relevant to multiple features, feel free to include them at the bottom of this file here.
+
+OTHER NOTES
+FEATURE 5
+
+Description: Console output convert into UI
+
+Usage Instructions: Convert all console output and input function into UI
+
+Design Decisions: Construct new view to own more label or textfields to put all input and output from console into UI.
+

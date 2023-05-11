@@ -1,0 +1,32 @@
+subway1N
+Finch:s-North York Centre:s-Sheppard Yonge:s-York Mills:s-Lawrence:s-Eglinton:s-Davisville:s-St. Clair:s-Summerhill:s-Rosedale:s-Bloor Yonge:s-Wellesley:s-College:s-Dundas:s-Queen:s-King:s-Union:s-St. Andrew:s-Osgoode:s-St. Patrick:s-Queen's Park:s-Museum:s-St. George:s-Spadina:s-Dupont:s-St. Clair West:s-Eglinton West:s-Glencairn:s-Lawrence West:s-Yorkdale:s-Wilson:s-Sheppard West:s-Downsview Park:s-Finch West:s-York University:s-Pioneer Village:s-Highway 407:s-Vaughan Metropolitan Centre:s
+subway1S
+Vaughan Metropolitan Centre:s-Highway 407:s-Pioneer Village:s-York University:s-Finch West:s-Downsview Park:s-Sheppard West:s-Wilson:s-Yorkdale:s-Lawrence West:s-Glencairn:s-Eglinton West:s-St. Clair West:s-Dupont:s-Spadina:s-St. George:s-Museum:s-Queen's Park:s-St. Patrick:s-Osgoode:s-St. Andrew:s-Union:s-King:s-Queen:s-Dundas:s-College:s-Wellesley:s-Bloor Yonge:s-Rosedale:s-Summerhill:s-St. Clair:s-Davisville:s-Eglinton:s-Lawrence:s-York Mills:s-Sheppard Yonge:s-North York Centre:s-Finch:s
+subway2W
+Kennedy:s-Warden:s-Victoria Park:s-Main Street:s-Woodbine:s-Coxwell:s-Greenwood:s-Donlands:s-Pape:s-Chester:s-Boradview:s-Castle Frank:s-Sherbourne:s-Bloor Yonge:s-Bay:s-St. George:s-Spadina:s-Bathurst:s-Christie:s-Ossington:s-Dufferin:s-Lansdowne:s-Dundas West:s-Keele:s-High Park:s-Runnymede:s-Jane:s-Old Mills:s-Royal York:s-Islington:s-Kipling:s
+subway2E
+Kipling:s-Islington:s-Royal York:s-Old Mills:s-Jane:s-Runnymede:s-High Park:s-Keele:s-Dundas West:s-Lansdowne:s-Dufferin:s-Ossington:s-Christie:s-Bathurst:s-Spadina:s-St. George:s-Bay:s-Bloor Yonge:s-Sherbourne:s-Castle Frank:s-Boradview:s-Chester:s-Pape:s-Donlands:s-Greenwood:s-Coxwell:s-Woodbine:s-Main Street:s-Victoria Park:s-Warden:s-Kennedy:s
+bus1W
+Weston Rd:b-Bradstock Rd:b-Rivalda Rd:b-Jane St:b-Arleta Ave:b-Sentinel Rd:b-Keele St:b-Bakersfield St:b-Sheppard West:b-Wilson Heights Blvd:b-Wilmington Ave:b-Bathurst St:b-Sheppard Yonge:b
+bus1E
+Sheppard Yonge:b-Bathurst St:b-Wilmington Ave:b-Wilson Heights Blvd:b-Sheppard West:b-Bakersfield St:b-Keele St:b-Sentinel Rd:b-Arleta Ave:b-Jane St:b-Rivalda Rd:b-Bradstock Rd:b-Weston Rd:b
+bus2W
+Humber College Bus Terminal:b-Westmore Dr:b-John Garland Blvd:b-Martin Grove Rd:b-Kipling Ave:b-Islington Ave:b-Armel Ct:b-Weston Rd:b-Clayson Rd:b-Jane St:b-Julian Rd:b-Keele St:b-Dubray Ave:b-Dufferin St:b-Wilson:b-Bathurst St:b-Avenue Rd:b-York Mills:b
+bus2E
+York Mills:b-Avenue Rd:b-Bathurst St:b-Wilson:b-Dufferin St:b-Dubray Ave:b-Keele St:b-Julian Rd:b-Jane St:b-Clayson Rd:b-Weston Rd:b-Armel Ct:b-Islington Ave:b-Kipling Ave:b-Martin Grove Rd:b-John Garland Blvd:b-Westmore Dr:b-Humber College Bus Terminal:b
+bus3W
+Pearson Airport Terminal 1:b-Pearson Airport Terminal 3:b-Carlingview Dr:b-Attwell Dr:b-Martin Grove Rd:b-Kipling Ave:b-Islington Ave:b-Dixon Rd:b-Scarlett Rd:b-Weston Rd:b-Pine St:b-Jane St:b-Culford Rd:b-Keele St:b-Benton Rd:b-Caledonia Rd:b-Dufferin St:b-Lawrence West:b-Bathrust St:b-Avenue Rd:b-Lawrence:b
+bus3E
+Lawrence:b-Avenue Rd:b-Bathrust St:b-Lawrence West:b-Dufferin St:b-Caledonia Rd:b-Benton Rd:b-Keele St:b-Culford Rd:b-Jane St:b-Pine St:b-Weston Rd:b-Scarlett Rd:b-Dixon Rd:b-Islington Ave:b-Kipling Ave:b-Martin Grove Rd:b-Attwell Dr:b-Carlingview Dr:b-Pearson Airport Terminal 3:b-Pearson Airport Terminal 1:b
+bus4W
+Steels Ave W:b-Finch Ave W:b-Albion Rd:b-Elmburst Dr:b-Dixon Rd:b-The Westway:b-Eglinton Ave W:b-Islington:b
+bus4E
+Islington:b-Eglinton Ave W:b-The Westway:b-Dixon Rd:b-Elmburst Dr:b-Albion Rd:b-Finch Ave W:b-Steels Ave W:b
+bus5W
+Pape:b-Cosburn Ave:b-Gateway Dr:b-St. Dennis Dr:b-Green Belt Dr:b-Lawrence Ave E:b-York Mills Rd:b-Duncan Mills Rd:b-Havenbrook Blvd:b-Goodstone Rd:b-Van Home Ave:b-Finch Ave E:b-McNicoll Ave:b-Steels Ave E:b
+bus5E
+Steels Ave E:b-McNicoll Ave:b-Finch Ave E:b-Van Home Ave:b-Goodstone Rd:b-Havenbrook Blvd:b-Duncan Mills Rd:b-York Mills Rd:b-Lawrence Ave E:b-Green Belt Dr:b-St. Dennis Dr:b-Gateway Dr:b-Cosburn Ave:b-Pape:b
+bus6W
+Victoria Park:b-St. Clair Ave E:b-O'Connor Dr:b-Eglinton Ave E:b-Lawrence Ave E:b-Rowena Dr:b-Parkwoods Village Dr:b-Pachino Blvd:b-Consumers Rd:b-Sheppard Ave E:b-McNicoll Ave:b-Golden Baker Rd:b-Steels Ave E:b
+bus6E
+Steels Ave E:b-Golden Baker Rd:b-McNicoll Ave:b-Sheppard Ave E:b-Consumers Rd:b-Pachino Blvd:b-Parkwoods Village Dr:b-Rowena Dr:b-Lawrence Ave E:b-Eglinton Ave E:b-O'Connor Dr:b-St. Clair Ave E:b-Victoria Park:b

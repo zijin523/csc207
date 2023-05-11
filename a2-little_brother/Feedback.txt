@@ -1,0 +1,149 @@
+Features Tested: 
+================================================================
+1) Fares are deducted from a card balance when riding bus (specifically when entering the bus)
+Mark: 0.25/0.25
+
+Feedback: 
+
+================================================================
+
+2) Fares are deducted when exiting subways
+Mark: 0.25/0.25
+
+Feedback: 
+
+================================================================
+
+3) Individual trips are capped at $6 e.g. riding a subway for three hours without exiting = $6 max charge (travel is free for 2hrs from the initial entry if trip during that two hours is capped)
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+4) New trip begins after this (i.e. riding subway for 3 hours, and then entering a bus = new charge for the bus)
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+5) Cardholder: Users can change their name and cannot change their email address. 
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+6) Cardholder: They can add multiple travel cards and can remove travel cards.
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+7) Cardholders can add $10, $20, $50 to their card balance at a time
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+8) If the next entrance (into a subway or bus) will move your balance from a positive to a negative number, the system will let you pay
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+9) If your card balance is already negative (balance <= 0): the system will prevent any further entrances 
+Mark: 0.25/0.25
+Feedback: 
+================================================================
+
+10) Users can also view their three most recent trips, suspend a stolen card's activity, and track their average transit cost per month 
+Mark: 0.25/0.25
+Feedback: 
+================================================================
+
+11) Admin user: Can view daily report that shows all fares collected each day and the total number of stops/stations reached by all cardholders
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+12) There is an easy to use input and clear output system.
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+13) Trips should only work in one direction for the bus, and should not loop back once it reaches the last stop.
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+14) The subway should be bidirectional, they should be able to go from s->...i->...->t, and also  t->...i->...->s, for some starting stop s, and target stop t.
+Mark: 0.25/0.25
+Feedback: 
+
+================================================================
+
+================================================================
+OVERALL Functionality Feedback:
+1. Enjoyed the visual representations in the routes.jpg and the software design. 
+2. The GUI was really well done, I found it easy to use.
+3. Could use better form check messages other than 'âˆš'.
+
+
+================================================================
+
+CODE ARCHITECTURE: 
+----------------------------------------------------------------
+Mark: 3/3
+
+Feedback:
+
+
+================================================================
+
+CODE STYLE: 
+----------------------------------------------------------------
+Mark: 2/2
+
+Feedback: 
+
+
+================================================================
+
+Documentation: 
+----------------------------------------------------------------
+Mark: 0.5/0.5
+
+Feedback: 
+
+
+================================================================
+
+USE OF SCRUM: 
+----------------------------------------------------------------
+Mark: 0.5/0.5
+
+Feedback: 
+
+
+================================================================
+
+USE OF GIT: 
+----------------------------------------------------------------
+Mark: 0.5/0.5
+
+Feedback: 
+
+
+================================================================
+
+BONUS MARK: 
+----------------------------------------------------------------
+Mark: 0.5/0.5
+
+Feedback: For the GUI.
+
+================================================================
+
+TOTAL MARK: 10.5/10
