@@ -1,0 +1,61 @@
+CSC207 Academic Honesty Reminder
+ 
+This document is to remind you of your responsibilities as a UofT student to academic integrity/honesty.
+ 
+Your code that you write for the assignment must be entirely your own. If you consulted any online resources for help/guidance, you must cite the source as a comment within your code.
+ 
+The resources that you consult can be online tutorials about general course concepts. They cannot be specific solutions that someone else (e.g. a tutor, friend, classmate, etc.) has written and posted somewhere online. (Note: You also cannot re-submit code you wrote yourself for a different course.)
+ 
+Please also do NOT post any of your code online on publicly available websites including, but not limited to, Piazza, Discord, Chegg, StackOverflow, Pastebin, Github, etc.
+ 
+Remember, if you can Google, we can Google too. We will compare your answers with not just everyone else in the course, but everything that you can find from Google as well.
+ 
+Q: What if I hand in code that I wrote myself but for a different course offering?
+ 
+Self-plagiarism is still an offence. This means that if your code looks identical or almost identical to code submitted to an earlier CS course, you are still guilty of academic offence even if you are the author of that code. It’s okay if you happen to have submitted a similar assignment to UofT before as long as you approach the assignment this year from scratch and do NOT refer to your earlier submission while completing the assignment this term.
+ 
+Q: Can I get help from a tutor outside of the course?
+ 
+If your tutor is sending you written code, chances are they are tutoring other students taking this course as well and are sending them the same code. When you and the other student submit this code, written by your common tutor, you will be called in for plagiarism.
+ 
+"I don't even know this student. I didn't talk to anyone in this class. My tutor who is not even at UTM helped me," is NOT a valid excuse. You are still guilty of academic offence if someone else has written code for you.
+ 
+Q: What if my code looks a little different? How do you know it is plagiarism?
+ 
+The assignment problems are complex enough that there are many, many ways to solve them. If your code looks too similar to another person's in the class, even if little things like the variable names are different, it is still plagiarism.
+ 
+It doesn't matter if you change variable names, add more spaces, change the order of some if-else statements. We have seen enough code to recognize when something is unique vs. copied/modified.
+ 
+Q: What happens if I get called in for an academic offence?
+ 
+You will be emailed for a short virtual interview with your instructor where you will be asked to sign an admission of guilt form. Be honest during your interview. If you say you are "Not guilty" when you actually are, it will just make the whole process longer for you, as the department will not be able to deal with your case, and you will be sent to the Dean, a meeting with whom can take up to 18 months to arrange (could be even longer now that we are in the middle of a pandemic). This means you will not be able to see your final course grade until this meeting has been arranged, and a decision has been made by the Dean's office.
+ 
+If you admit that you are guilty, if this is your first offence, the penalty will most likely – I cannot say for certain, as the final decision is made by the Department, and not me personally – be a 0 on the assignment, and a note on your transcript that says you have committed an academic offence.
+
+
+However, if this is not your first time getting charged with an offence, your case will be sent to the Dean's office to be dealt with and the penalties for a second offence are usually much more severe. So, if you have already committed an academic offense before, do not repeat the same mistake!
+ 
+After reading all of the above, please save this document, fill out the form below, then ‘git add’ it to your a1-githubusername repository, ‘git commit –m ‘academic honesty form signed’’ and ‘git push’!
+ 
+Academic Honesty Form
+Please put an [x] beside all the statements that you agree with below:
+ 
+[X] I have read all of the above and understand everything I read.
+ 
+[X] I agree that ALL work I am handing in is my own, written specifically during and for the Fall 2020 CSC207 course.
+ 
+[X] I agree that I did NOT show others my code, or view other people's code to help me with any aspect of this project.
+ 
+[X] I agree that I did NOT post my code online on publicly available websites such as Piazza, Discord, Chegg, StackOverflow, Pastebin, Github, etc.
+ 
+[X] I am aware that it is okay for me to consult other resources for help and guidance, but if I am copying pieces of code directly from a resource (including my own work submitted to a different course offering), this counts as plagiarism.
+ 
+[X] I am aware that if my code bears an unreasonable similarity to someone else's code (either in this class, previous classes, online, or a tutor's, etc.), I will be called for a meeting which could lead to a meeting with the Dean's office and possible disciplinary consequences such as receiving a 0 on the assignment.
+ 
+[X] I am aware that any academic offence will be written on my transcript and may affect my future chances and opportunities in academic and professional contexts.
+ 
+By writing my name on the line below, I agree that all of the statements above are true.
+ 
+If I do not agree with the statements above, I will not submit my assignment and will consult the course instructor immediately.
+ 
+Name: _________Zijin Liao_______________________
